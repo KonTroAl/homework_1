@@ -22,3 +22,52 @@
 Реализуйте поиск трех компаний с наибольшей годовой прибылью.
 Выведите результат.
 """
+
+
+
+company = {"LG": 20000, "HP": 300000, "MSI": 80000, "ProDuction": 100000, "GasLight": 150000}
+
+"""First"""
+
+lst = list(company.values())
+max_val = []
+count = 3
+# i = 1
+# while len(max_val) != count:
+#     val = 0
+#     i = 1
+#     for a in lst:
+#         if a > val:
+#             i += 1
+#             val = a
+#     max_val.append(val)
+#     lst.remove(val)
+#
+# company_max = []
+# for k, v in company.items():
+#     for c in max_val:
+#         if v == c:
+#             company_max.append(k)
+#
+# print(max_val)
+# print(company_max)
+
+"""Second"""
+
+# while len(max_val) != count:
+#     max_val.append(max(lst))
+#     lst.remove(max(lst))
+#
+# company_max = []
+# for k, v in company.items():
+#     for c in max_val:
+#         if v == c:
+#             company_max.append(k)
+#
+# print(max_val)
+# print(company_max)
+
+"""Third"""
+max_company = []
+for k, v in company.items():
+    max_company.append(m)
