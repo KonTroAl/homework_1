@@ -27,3 +27,73 @@
 Для реализации хранилища можно применить любой подход,
 который вы придумаете, например, реализовать словарь.
 """
+
+"""
+First
+Difficulty: 
+
+"""
+
+# def activations(nam):
+#     for i in users_activation:
+#         if i == nam:
+#             return True
+#         else:
+#             c = input("You need to activate your account!Do you want activate it now?(Enter 'Yes' or 'No') ")
+#             if c == "Yes":
+#                 users_activation.append(nam)
+#             else:
+#                 return False
+#
+# def authentication(nam, pas):
+#     for k, v in users_storage.items():
+#         if k == nam and v == pas:
+#             if activations(nam) == True:
+#                 print("Welcome!")
+#                 break
+#             else:
+#                 print("Permission to our site denied!")
+#                 break
+#         else:
+#             print("Your login or password incorrect!")
+#
+# users_storage = {"Kostya": 111111, "Julia": 222222}
+# users_activation = ["Julia"]
+#
+# a = input("Enter your name: ")
+# b = int(input("Enter your password: "))
+#
+# authentication(a, b)
+
+"""
+Second
+Difficulty: 
+
+"""
+
+def authentication(nam, pas):
+    for k, v in users_storage.items():
+        if k == nam and v == pas:
+            for i in users_activation:
+                if i == nam:
+                    print("Welcome!")
+                    break
+                else:
+                    c = input("You need to activate your account!Do you want activate it now?(Enter 'Yes' or 'No') ")
+                    if c == "Yes":
+                        users_activation.append(nam)
+                    else:
+                        print("Permission to our site denied!")
+                        break
+            break
+        else:
+            print("Your login or password incorrect!")
+
+users_storage = {"Kostya": 111111, "Julia": 222222}
+users_activation = ["Julia"]
+
+a = input("Enter your name: ")
+b = int(input("Enter your password: "))
+
+authentication(a, b)
+

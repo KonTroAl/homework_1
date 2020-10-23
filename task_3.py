@@ -27,12 +27,13 @@
 
 company = {"LG": 20000, "HP": 300000, "MSI": 80000, "ProDuction": 100000, "GasLight": 150000}
 
-"""First"""
+"""First
+Difficulty:O(n**3) """
 
 lst = list(company.values())
 max_val = []
 count = 3
-# i = 1
+
 # while len(max_val) != count:
 #     val = 0
 #     i = 1
