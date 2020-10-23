@@ -30,44 +30,45 @@
 
 """
 First
-Difficulty: 
+Difficulty: O(2n**3): 2n**3 + 4
 
 """
 
-# def activations(nam):
-#     for i in users_activation:
-#         if i == nam:
-#             return True
-#         else:
-#             c = input("You need to activate your account!Do you want activate it now?(Enter 'Yes' or 'No') ")
-#             if c == "Yes":
-#                 users_activation.append(nam)
-#             else:
-#                 return False
-#
-# def authentication(nam, pas):
-#     for k, v in users_storage.items():
-#         if k == nam and v == pas:
-#             if activations(nam) == True:
-#                 print("Welcome!")
-#                 break
-#             else:
-#                 print("Permission to our site denied!")
-#                 break
-#         else:
-#             print("Your login or password incorrect!")
-#
-# users_storage = {"Kostya": 111111, "Julia": 222222}
-# users_activation = ["Julia"]
-#
-# a = input("Enter your name: ")
-# b = int(input("Enter your password: "))
-#
-# authentication(a, b)
+def activations(nam):       # Difficulty: n**3
+    for i in users_activation:   # n
+        if i == nam:             # n
+            return True          # 1
+        else:
+            c = input("You need to activate your account!Do you want activate it now?(Enter 'Yes' or 'No') ")  # 1
+            if c == "Yes":                                                                                     # n
+                users_activation.append(nam)                                                                   # 1
+            else:
+                return False                                                                                   # 1
+
+def authentication(nam, pas): # Difficulty: n**3
+    for k, v in users_storage.items():
+        if k == nam and v == pas:
+            if activations(nam) == True:
+                print("Welcome!")
+                break
+            else:
+                print("Permission to our site denied!")
+                break
+        else:
+            print("Your login or password incorrect!")
+
+users_storage = {"Kostya": 111111, "Julia": 222222}  # 1
+users_activation = ["Julia"]                         # 1
+
+
+a = input("Enter your name: ")                       #1
+b = int(input("Enter your password: "))              #1
+
+authentication(a, b)
 
 """
 Second
-Difficulty: 
+Difficulty: O(n**5): n**5 + 9 
 
 """
 
@@ -97,3 +98,9 @@ b = int(input("Enter your password: "))
 
 authentication(a, b)
 
+"""
+Summary
+Первое решение эффективнее в связи с тем, что ресурсозатратные операции по перебору и сравнению элементов списка и 
+словаря разделеные примерно по поплам через две разные функции, что уменьшает сложность как отдельной взятой функции, 
+так и кода в целом
+"""
