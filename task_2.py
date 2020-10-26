@@ -18,7 +18,23 @@
 А без столкновения со сложностями его не развить.
 """
 
-"""First"""
+"""Second O()"""
+
+def my_min(lst):
+    for i in lst:
+        is_min = True
+        for val in lst:
+            if i > val:
+                is_min = False
+        if is_min:
+            return i
+
+
+a = [2, 4, 1, 5, 10]
+
+print(my_min(a))
+
+"""Second O(n)"""
 
 def my_min(lst):
 
@@ -32,10 +48,5 @@ def my_min(lst):
 a = [2, 4, 1, 5, 0]
 
 print(my_min(a))
-
-"""Second"""
-
-b = [2, 4, 1, 5, 10]
-print(min(b))
 
 
